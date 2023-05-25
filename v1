@@ -1,0 +1,31 @@
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Main {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Пример окна с кнопками");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(200, 200);
+
+        JPanel panel = new JPanel();
+        frame.add(panel);
+
+        JButton button1 = new JButton("Кнопка А");
+        button1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Бипки");
+            }
+        });
+        panel.add(button1);
+
+        JButton button2 = new JButton("Кнопка Б");
+        button2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Ба-Ба-Дууууууук");
+            }
+        });
+        panel.add(button2);
+
+        frame.setVisible(true);
+    }
+}
